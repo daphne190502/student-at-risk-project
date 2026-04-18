@@ -695,7 +695,7 @@ elif page == "🔍 Student Profile":
                 "<div class='section-header'>📊 Performance Metrics</div>",
                 unsafe_allow_html=True
             )
-            col1, col2, col3, col4, col5 = st.columns(5)
+            col1, col2, col3 = st.columns(3)
             with col1:
                 st.metric(
                     "Avg Score",
@@ -716,17 +716,7 @@ elif page == "🔍 Student Profile":
                     "Weekly Clicks",
                     f"{student['avg_weekly_clicks']}"
                 )
-            with col4:
-                st.metric(
-                    "Assignments Done",
-                    f"{int(student['total_submitted'])}"
-                )
-            with col5:
-                st.metric(
-                    "Late Submissions",
-                    f"{int(student['late_submissions'])}"
-                )
-
+                
             st.markdown("---")
 
             # Charts
