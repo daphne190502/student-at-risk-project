@@ -93,7 +93,7 @@ st.markdown("""
 # ── Load data ─────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data/processed/predictions.csv")
+    df = pd.read_csv("predictions.csv")
     df["withdrawal_probability"] = df["withdrawal_probability"].round(1)
     return df
 
