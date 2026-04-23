@@ -385,7 +385,7 @@ elif page == "⚠️ Early Warnings":
         return ""
 
     st.dataframe(
-        top20.style.applymap(colour_risk, subset=["Risk Tier"]),
+        top20.style.map(colour_risk, subset=["Risk Tier"]),
         use_container_width=True, height=600
     )
 
@@ -502,7 +502,7 @@ elif page == "📋 Risk Register":
         return ""
 
     st.dataframe(
-        filtered_display.style.applymap(
+        filtered_display.style.map(
             colour_risk_register, subset=["Risk Tier"]),
         use_container_width=True, height=550
     )
