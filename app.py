@@ -819,7 +819,7 @@ elif page == "🔮 Predict New Student":
             prev_attempts,                           # num_prev_attempts
             credits,                                 # studied_credits
             1 if part_time_job == "Yes" else 0,      # part_time_job
-            1 if english_first == "Yes" else 0,      # english_first_lang
+            0 if english_first == "Yes" else 1,      # english_first_lang
             TRANSPORT_MAP[transport],                # transport_encoded
             EDUCATION_MAP[highest_edu],              # education_encoded
             IMD_MAP[imd_band],                       # imd_encoded
